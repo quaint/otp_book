@@ -2,6 +2,8 @@ defmodule Mastery.Boundary.QuizSession do
   alias Mastery.Core.{Quiz, Response}
   use GenServer
 
+
+
   def init({quiz, email}) do
     {:ok, {quiz, email}}
   end
