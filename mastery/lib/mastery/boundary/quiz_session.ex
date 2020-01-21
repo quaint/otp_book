@@ -11,7 +11,10 @@ defmodule Mastery.Boundary.QuizSession do
   end
 
   def start_link({quiz, email}) do
-    GenServer.start_link(__MODULE__, {quiz, email}, name: via({quiz.title, email}))
+    GenServer.start_link(
+      __MODULE__,
+      {quiz, email},
+      name: via({quiz.title, email}))
   end
 
   def take_quiz(quiz, email) do
